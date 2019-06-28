@@ -8,7 +8,7 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">                                              
 
         <!-- Styles -->
         <style>
@@ -65,7 +65,7 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        {{-- <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -78,19 +78,19 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+            @endif --}}
 
             <div class="content">
                 <div class="title m-b-md">
                     Login Page
                 </div>
-                <form class="form-inline" method="POST" action="{{ route('login') }}">
+                <form class="form-inline" method="POST" action="{{ route('loginPOST') }}">
                     
                     {{ csrf_field() }}
 
                     <div class="form-group mx-sm-3 mb-2">
-                        <label for="inputPassword2" class="sr-only">Email</label>
-                        <input type="text" class="form-control" id="inputPassword2" placeholder="Email">
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="text" class="form-control" id="email" placeholder="Email">
                       </div>
 
                     <div class="form-group mx-sm-3 mb-2">
@@ -98,8 +98,9 @@
                       <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
                     </div>
 
+                    <div class="form-group">
                     <button type="submit" class="btn btn-primary mb-2">Login</button>
-                    
+                    </div>
                   </form>
 
                 </div>

@@ -11,19 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
 
-Route::group(['middelware' => ['guest']], function(){
-   
-Route::get('/login','LoginController@create')->name('show-login');
-Route::post('/login','LoginController@store')->name('login');
-});
 
-Route::get('/home', function () {
-    return view('home');
-});
+// Route::group(['middelware' => ['guest']], function(){   
+
+Route::get('/loginGet','LoginController@create');
+Route::post('/login','LoginController@store')->name('loginPOST');
+// });
+
+Route::get('/home', 'ArticlesController@index')->name('home');
 
 
 
