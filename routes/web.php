@@ -15,4 +15,15 @@ Route::get('/', function () {
     return view('login');
 });
 
+Route::group(['middelware' => ['guest']], function(){
+   
+Route::get('/login','LoginController@create')->name('show-login');
+Route::post('/login','LoginController@store')->name('login');
+});
+
+Route::get('/home', function () {
+    return view('home');
+});
+
+
 

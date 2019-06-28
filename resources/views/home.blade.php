@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Login page</title>
+        <title>Home page</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -82,27 +82,15 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Login Page
+                   Home page
                 </div>
-                <form class="form-inline" method="POST" action="{{ route('login') }}">
-                    
-                    {{ csrf_field() }}
+                <a href="http://www.google.com" target="_parent"><button type="submit" class="btn btn-success mb-2">Create new Article</button></a>
+                <a href="http://www.google.com" target="_parent"><button type="submit" class="btn btn-warning mb-2">Update Article</button></a>
+                <a href="http://www.google.com" target="_parent"><button type="submit" class="btn btn-danger mb-2">Delete Article</button></a>
+                <a href="http://www.google.com" target="_parent"><button type="submit" class="btn btn-info mb-2">List Articles</button></a>
+                
+            </div>
 
-                    <div class="form-group mx-sm-3 mb-2">
-                        <label for="inputPassword2" class="sr-only">Email</label>
-                        <input type="text" class="form-control" id="inputPassword2" placeholder="Email">
-                      </div>
-
-                    <div class="form-group mx-sm-3 mb-2">
-                      <label for="inputPassword2" class="sr-only">Password</label>
-                      <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-                    </div>
-
-                    <button type="submit" class="btn btn-primary mb-2">Login</button>
-                    
-                  </form>
-
-                </div>
             </div>
         </div>
     </body>
